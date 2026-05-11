@@ -68,7 +68,7 @@ export default function Hero() {
           as="h1"
           className="text-[44px] sm:text-[64px] md:text-[80px] leading-[0.98] tracking-tighter2 font-medium"
         >
-          Backend engineer
+          Software engineer
           <br />
           building <span className="accent-underline">reliable</span> systems
           <br className="hidden sm:block" />

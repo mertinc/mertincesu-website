@@ -10,7 +10,7 @@ export default function Nav() {
             Mert Incesu
           </span>
           <span className="hidden sm:inline text-dim text-[13px] font-mono">
-            / backend engineer
+            / software engineer
           </span>
         </a>
 
