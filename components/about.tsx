@@ -27,10 +27,6 @@ export default function About() {
                 <div className="mt-1">800 × 1000</div>
               </div>
             </div>
-            <div className="mt-4 font-mono text-[11px] text-dim flex items-center justify-between">
-              <span>// drop your photo here</span>
-              <span>4:5</span>
-            </div>
           </Reveal>
 
           {/* Bio */}
