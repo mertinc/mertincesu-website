@@ -32,8 +32,7 @@ export default function About() {
           {/* Bio */}
           <Reveal className="md:col-span-8">
             <h2 className="text-[32px] md:text-[40px] leading-[1.05] tracking-tighter2 font-medium max-w-[20ch]">
-              I build the boring parts well — so the interesting parts can stay
-              interesting.
+              I engineer the essential parts carefully, so the complex parts work seamlessly.
             </h2>
 
             <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-muted max-w-[62ch]">
