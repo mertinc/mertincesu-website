@@ -58,7 +58,7 @@ const items: ExperienceItem[] = [
   {
     period: "Oct 2021 — Feb 2022",
     location: "Istanbul",
-    role: "Software Development Intern",
+    role: "Software Developer",
     company: "PYZ Realise Design Studio",
     companyNote: "design studio",
     description:
