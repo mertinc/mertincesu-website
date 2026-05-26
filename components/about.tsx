@@ -2,7 +2,7 @@ import Reveal from "./reveal";
 
 const facts = [
   { label: "Based in", value: "Munich, DE" },
-  { label: "Languages", value: "EN · DE · TR" },
+  { label: "Languages", value: "English · German · Turkish" },
   { label: "Role", value: "Backend / Platform" },
 ] as const;
 
@@ -57,16 +57,16 @@ export default function About() {
               </p>
             </div>
 
-            <dl className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5 max-w-[640px]">
+            <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-5">
               {facts.map(({ label, value }) => (
                 <div key={label}>
                   <dt className="eyebrow">{label}</dt>
-                  <dd className="mt-1.5 text-[14px]">{value}</dd>
+                  <dd className="mt-1.5 text-[14px] whitespace-nowrap">{value}</dd>
                 </div>
               ))}
               <div>
                 <dt className="eyebrow">Status</dt>
-                <dd className="mt-1.5 text-[14px] flex items-center gap-1.5">
+                <dd className="mt-1.5 text-[14px] flex items-center gap-1.5 whitespace-nowrap">
                   <span
                     className="w-1.5 h-1.5 rounded-full bg-accent"
                     aria-hidden="true"
