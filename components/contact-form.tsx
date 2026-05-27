@@ -45,7 +45,6 @@ export default function ContactForm() {
         <h3 className="text-[16px] font-medium tracking-tightish">
           Send a message
         </h3>
-        <span className="font-mono text-[11px] text-dim">// optional</span>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
