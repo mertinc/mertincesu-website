@@ -17,10 +17,10 @@ const categories = [
     badge: "backend",
     items: [
       { name: "Spring Boot", note: "2.x / 3.x" },
-      { name: "Spring WebFlux", note: "reactive" },
-      { name: "Ktor", note: "side projects" },
-      { name: "JUnit · Testcontainers", note: "integration" },
-      { name: "Flyway · jOOQ", note: "data layer" },
+      { name: "Spring WebFlux", note: "reactive systems" },
+      { name: "Ktor", note: "lightweight services" },
+      { name: "JUnit · Testcontainers", note: "integration testing" },
+      { name: "Flyway · jOOQ", note: "database tooling" },
     ],
   },
   {
