@@ -81,7 +81,7 @@ export default function Hero() {
         >
           I&apos;m <span className="text-fg">Mert Incesu</span> — a software
           engineer with 3+ years of experience designing and shipping production
-          microservices in Kotlin, Java and Spring Boot. I care about clear
+          microservices in Java, Kotlin and Spring Boot. I care about clear
           contracts, observability, and code that ages well.
         </Reveal>
 
