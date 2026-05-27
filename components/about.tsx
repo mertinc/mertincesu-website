@@ -32,7 +32,7 @@ export default function About() {
           {/* Bio */}
           <Reveal className="md:col-span-8">
             <h2 className="text-[32px] md:text-[40px] leading-[1.05] tracking-tighter2 font-medium max-w-[20ch]">
-              I engineer the essential parts carefully, so the complex parts work seamlessly.
+              I build the essential parts carefully, so the complex parts work seamlessly.
             </h2>
 
             <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-muted max-w-[62ch]">
@@ -43,17 +43,10 @@ export default function About() {
                 with PostgreSQL underneath and Kafka in front.
               </p>
               <p>
-                I&apos;m at my best when a system needs to be made{" "}
-                <span className="text-fg">predictable</span> — defining
-                contracts, tightening boundaries, paying down the kind of debt
-                that wakes people up at 3am. I write down decisions, draw the
-                boxes before the code, and prefer four good integration tests to
-                forty flaky unit tests.
-              </p>
-              <p>
-                Outside the IDE you&apos;ll find me climbing in the Alps,
-                reading distributed-systems papers, or losing at chess to a
-                teenager on lichess.
+                I perform best in environments where systems must remain reliable, maintainable, and operationally{" "}
+                <span className="text-fg">predictable</span>. My focus is on defining clear service boundaries,
+                 establishing stable contracts, and reducing technical debt before it becomes operational risk. 
+                  I value thoughtful architecture, clear documentation, and pragmatic engineering decisions that improve long-term system stability.
               </p>
             </div>
 
