@@ -5,16 +5,16 @@ const categories = [
     title: "Languages",
     badge: "core",
     items: [
-      { name: "Kotlin", note: "primary · 3y" },
       { name: "Java", note: "8 → 21" },
-      { name: "SQL", note: "Postgres dialect" },
-      { name: "TypeScript", note: "tooling, scripts" },
-      { name: "Bash", note: "when I must" },
+      { name: "Kotlin", note: "JVM backend" },
+      { name: "SQL", note: "PostgreSQL-focused" },
+      { name: "TypeScript", note: "React ecosystems" },
+      { name: "Bash", note: "automation and scripting" },
     ],
   },
   {
     title: "Frameworks",
-    badge: "daily",
+    badge: "backend",
     items: [
       { name: "Spring Boot", note: "2.x / 3.x" },
       { name: "Spring WebFlux", note: "reactive" },
@@ -28,10 +28,10 @@ const categories = [
     badge: "infra",
     items: [
       { name: "PostgreSQL", note: "12 → 16" },
-      { name: "Redis", note: "cache, locks" },
-      { name: "Apache Kafka", note: "events, CDC" },
-      { name: "OpenSearch", note: "search · logs" },
-      { name: "S3 · DynamoDB", note: "AWS" },
+      { name: "Redis", note: "caching and locking" },
+      { name: "Apache Kafka", note: "event-driven systems" },
+      { name: "OpenSearch", note: "search and observability" },
+      { name: "S3 · DynamoDB", note: "AWS services" },
     ],
   },
   {
@@ -39,11 +39,11 @@ const categories = [
     badge: "cloud",
     items: [
       { name: "AWS", note: "ECS · Lambda · RDS" },
-      { name: "Docker", note: "multi-stage" },
-      { name: "Kubernetes", note: "helm, kustomize" },
-      { name: "Terraform", note: "IaC" },
-      { name: "GitHub Actions", note: "CI/CD" },
-      { name: "Grafana · OTel", note: "observability" },
+      { name: "Docker", note: "containerized deployments" },
+      { name: "Kubernetes", note: "Helm · Kustomize" },
+      { name: "Terraform", note: "nfrastructure as code" },
+      { name: "GitHub Actions", note: "CI/CD pipelines" },
+      { name: "Grafana · OpenTelemetry", note: "monitoring and tracing" },
     ],
   },
 ] as const;
@@ -72,7 +72,7 @@ export default function Stack() {
 
         <Reveal className="max-w-3xl mb-14">
           <h2 className="text-[32px] md:text-[44px] leading-[1.05] tracking-tighter2 font-medium">
-            Tools I reach for.
+            Technologies I work with
           </h2>
           <p className="mt-4 text-muted text-[16px] leading-relaxed">
             A short list, on purpose. I prefer to go deep on a small set than
