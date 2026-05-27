@@ -80,10 +80,10 @@ export default function Contact() {
           {/* Left — headline + contact links */}
           <Reveal className="md:col-span-5">
             <h2 className="text-[32px] md:text-[48px] leading-[1.02] tracking-tighter2 font-medium">
-              Let&apos;s talk.
+              Get in touch.
               <br />
               <span className="text-muted">
-                I read every message.
+                I respond to every message.
                 <span className="caret">&nbsp;</span>
               </span>
             </h2>
