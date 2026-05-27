@@ -45,17 +45,17 @@ const links = [
     arrow: "→",
   },
   {
-    icon: GitHubIcon,
-    label: "GitHub",
-    display: "github.com/mertincesu",
-    href: "https://github.com/mertincesu",
+    icon: LinkedInIcon,
+    label: "LinkedIn",
+    display: "linkedin.com/in/mert-incesu",
+    href: "https://linkedin.com/in/mert-incesu",
     arrow: "→",
   },
   {
-    icon: LinkedInIcon,
-    label: "LinkedIn",
-    display: "linkedin.com/in/mertincesu",
-    href: "https://linkedin.com/in/mertincesu",
+    icon: GitHubIcon,
+    label: "GitHub",
+    display: "github.com/mertinc",
+    href: "https://github.com/mertinc",
     arrow: "→",
   },
   {
@@ -88,9 +88,9 @@ export default function Contact() {
               </span>
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-muted max-w-[42ch]">
-              Best for senior backend / platform roles in Munich, Berlin, or
-              remote-EU. Also happy to discuss open-source collaborations and
-              the occasional architecture review.
+              Interested in backend and platform engineering roles across Munich, Berlin, or 
+              remote within Europe. Also open to open-source collaborations, personal projects,
+              and long-term client or project-based engineering work.
             </p>
 
             <ul className="mt-10 space-y-px border border-line rounded-lg overflow-hidden">
