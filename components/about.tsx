@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "./reveal";
 
 const facts = [
@@ -18,14 +19,14 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           {/* Photo placeholder */}
           <Reveal className="md:col-span-4">
-            <div
-              className="aspect-[4/5] rounded-lg border border-line stripe-placeholder flex items-center justify-center"
-              aria-label="Portrait photo placeholder"
-            >
-              <div className="text-center font-mono text-[11px] text-dim leading-relaxed">
-                <div>[ portrait.jpg ]</div>
-                <div className="mt-1">800 × 1000</div>
-              </div>
+            <div className="relative aspect-[4/5] rounded-lg border border-line overflow-hidden">
+              <Image
+                src="/portrait.jpg"
+                alt="Mert Incesu"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </div>
           </Reveal>
 
