@@ -72,7 +72,7 @@ export default function Contact() {
     <section id="contact" className="border-t border-line">
       <div className="max-w-[1120px] mx-auto px-6 py-24 md:py-32">
         <Reveal className="flex items-center gap-3 mb-12">
-          <span className="eyebrow">05 / Contact</span>
+          <span className="eyebrow">04 / Contact</span>
           <span className="h-px flex-1 bg-line" aria-hidden="true" />
         </Reveal>
 

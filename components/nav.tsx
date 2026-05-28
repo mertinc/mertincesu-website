@@ -17,7 +17,7 @@ export default function Nav() {
         <nav aria-label="Site sections" className="hidden md:flex items-center gap-7 text-[13px] text-muted">
           <a href="#about" className="hover:text-fg transition-colors">About</a>
           <a href="#stack" className="hover:text-fg transition-colors">Stack</a>
-          <a href="#projects" className="hover:text-fg transition-colors">Projects</a>
+          {/* <a href="#projects" className="hover:text-fg transition-colors">Projects</a> */}
           <a href="#experience" className="hover:text-fg transition-colors">Experience</a>
           <a href="#contact" className="hover:text-fg transition-colors">Contact</a>
         </nav>
