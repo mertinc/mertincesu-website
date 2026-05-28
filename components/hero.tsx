@@ -86,22 +86,22 @@ export default function Hero() {
         </Reveal>
 
         <Reveal className="mt-10 flex flex-wrap items-center gap-3">
-          <a
+          {/* <a
             href="#projects"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors"
           >
             View projects
             <ArrowRightIcon />
-          </a>
+          </a> */}
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-line2 text-[14px] hover:border-fg/40 hover-glass transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors"
           >
             Get in touch
           </a>
           <a
             href="#"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-line text-[14px] text-muted hover:text-fg hover:border-line2 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-line2 text-[14px] hover:border-fg/40 hover-glass transition-colors"
           >
             <DownloadIcon />
             Download CV
