@@ -4,9 +4,11 @@ import { useState } from "react";
 
 const subjects = [
   "Hiring / role opportunity",
+  "Contract or project-based engagement",
+  "Long-term client or consultancy",
   "Open-source collaboration",
-  "Architecture review",
-  "Just saying hi",
+  "Personal project",
+  "Other",
 ] as const;
 
 function ArrowRightIcon() {
