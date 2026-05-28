@@ -85,7 +85,7 @@ export default function ContactForm() {
           rows={6}
           required
           className="mt-2 w-full bg-transparent border border-line rounded-md px-3 py-2.5 text-[14px] focus:border-line2 focus-glass outline-none resize-none"
-          placeholder="A short note about the role, the team, and what you're solving."
+          placeholder="Describe the project, role, or idea you'd like to discuss."
         />
       </label>
 
