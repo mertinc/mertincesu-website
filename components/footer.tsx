@@ -5,8 +5,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
           <span>© 2026 Mert Incesu</span>
-          <span className="dot-row" aria-hidden="true" />
-          <span>Built with Next.js · Tailwind</span>
+
         </div>
         <div className="flex items-center gap-5">
           <a href="#top" className="hover:text-fg transition-colors">
