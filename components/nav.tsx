@@ -1,3 +1,11 @@
+const NAV_LINKS = [
+  { href: "#about", label: "About" },
+  { href: "#stack", label: "Stack" },
+  // { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-40 nav-blur border-b border-line">
@@ -15,11 +23,11 @@ export default function Nav() {
         </a>
 
         <nav aria-label="Site sections" className="hidden md:flex items-center gap-7 text-[13px] text-muted">
-          <a href="#about" className="hover:text-fg transition-colors">About</a>
-          <a href="#stack" className="hover:text-fg transition-colors">Stack</a>
-          {/* <a href="#projects" className="hover:text-fg transition-colors">Projects</a> */}
-          <a href="#experience" className="hover:text-fg transition-colors">Experience</a>
-          <a href="#contact" className="hover:text-fg transition-colors">Contact</a>
+          {NAV_LINKS.map(({ href, label }) => (
+            <a key={href} href={href} className="hover:text-fg transition-colors">
+              {label}
+            </a>
+          ))}
         </nav>
 
         <a
