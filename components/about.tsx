@@ -4,7 +4,7 @@ import Reveal from "./reveal";
 const facts = [
   { label: "Based in", value: "Munich, DE" },
   { label: "Languages", value: "English · German · Turkish" },
-  { label: "Role", value: "Backend / Platform" },
+  { label: "Role", value: "Backend Engineer / Fullstack Engineer" },
 ] as const;
 
 export default function About() {
