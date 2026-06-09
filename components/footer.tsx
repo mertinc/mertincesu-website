@@ -11,8 +11,7 @@ export default function Footer() {
           <a href="#top" className="hover:text-fg transition-colors">
             Back to top ↑
           </a>
-          <a href="#" className="hover:text-fg transition-colors">RSS</a>
-          <a href="#" className="hover:text-fg transition-colors">Sitemap</a>
+
         </div>
       </div>
     </footer>
