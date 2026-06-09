@@ -1,4 +1,5 @@
 import Reveal from "./reveal";
+import LocalTime from "./local-time";
 
 function ArrowRightIcon() {
   return (
@@ -59,9 +60,9 @@ export default function Hero() {
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
           <span>Munich, Germany</span>
           <span className="text-dim">·</span>
-          <span>UTC+1</span>
+          <LocalTime />
           <span className="text-dim">·</span>
-          <span>v2026.05</span>
+          <span>v2026.06</span>
         </Reveal>
 
         <Reveal
