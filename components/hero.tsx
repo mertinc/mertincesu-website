@@ -44,7 +44,7 @@ const stats = [
   { label: "Focus", value: "Distributed backends", mono: false },
   { label: "Primary", value: "Kotlin · Spring Boot", mono: true },
   { label: "Experience", value: "3+ years, production", mono: false },
-  { label: "Open to", value: "Senior BE · Platform · DE", mono: false },
+  { label: "Open to", value: "Backend · Full-Stack · Platform", mono: false },
 ] as const;
 
 export default function Hero() {
