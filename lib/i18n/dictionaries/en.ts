@@ -31,7 +31,7 @@ const en = {
     intro: {
       pre: "I'm ",
       name: "Mert Incesu",
-      post: " — a software engineer with 3+ years of experience designing and shipping production microservices in Java, Kotlin and Spring Boot. I care about clear contracts, observability, and code that ages well.",
+      post: " — a software engineer with 3+ years of experience designing and shipping production microservices in Java, Kotlin and Spring Boot. I design services around stable, well-documented APIs, build observability in from the start, and write code that supports long-term maintainability.",
     },
     ctaContact: "Get in touch",
     ctaCv: "Download CV",

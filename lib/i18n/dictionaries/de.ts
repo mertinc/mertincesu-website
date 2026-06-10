@@ -33,7 +33,7 @@ const de: Dictionary = {
     intro: {
       pre: "Ich bin ",
       name: "Mert Incesu",
-      post: " — Softwareentwickler mit über drei Jahren Erfahrung im Entwurf und Betrieb von Produktions-Microservices mit Java, Kotlin und Spring Boot. Mir sind klare Verträge, Observability und Code wichtig, der gut altert.",
+      post: " — Softwareentwickler mit über drei Jahren Erfahrung im Entwurf und Betrieb von Produktions-Microservices mit Java, Kotlin und Spring Boot. Ich entwerfe Services rund um stabile, gut dokumentierte APIs, denke Observability von Anfang an mit und schreibe Code, der auf langfristige Wartbarkeit ausgelegt ist.",
     },
     ctaContact: "Kontakt aufnehmen",
     ctaCv: "Lebenslauf herunterladen",

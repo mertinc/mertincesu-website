@@ -33,7 +33,7 @@ const tr: Dictionary = {
     intro: {
       pre: "Ben ",
       name: "Mert Incesu",
-      post: " — Java, Kotlin ve Spring Boot ile üç yılı aşkın süredir prodüksiyon mikroservisleri tasarlayıp yayına alan bir yazılım mühendisiyim. Net sözleşmelere, gözlemlenebilirliğe ve zamanla iyi yaşlanan koda önem veririm.",
+      post: " — Java, Kotlin ve Spring Boot ile üç yılı aşkın süredir mikroservisler geliştiren bir yazılım mühendisiyim. Servisleri istikrarlı ve kapsamlı dokümantasyona sahip API'ler etrafında tasarlar, gözlemlenebilirliği en baştan planlayarak zaman içinde bakımını ve geliştirilmesini kolaylaştıran yazılımlar geliştiririm.",
     },
     ctaContact: "İletişime geç",
     ctaCv: "CV'yi indir",
