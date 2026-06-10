@@ -1,5 +1,6 @@
 import Reveal from "./reveal";
 import ContactForm from "./contact-form";
+import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
 function Svg({ children }: { children: React.ReactNode }) {
   return (
@@ -28,62 +29,60 @@ function GlobeIcon() {
 const links = [
   {
     icon: EmailIcon,
-    label: "Email",
+    key: "email",
     display: "mert@mertincesu.dev",
     href: "mailto:mert@mertincesu.dev",
     arrow: "→",
   },
   {
     icon: LinkedInIcon,
-    label: "LinkedIn",
+    key: "linkedin",
     display: "linkedin.com/in/mert-incesu",
     href: "https://linkedin.com/in/mert-incesu",
     arrow: "→",
   },
   {
     icon: GitHubIcon,
-    label: "GitHub",
+    key: "github",
     display: "github.com/mertinc",
     href: "https://github.com/mertinc",
     arrow: "→",
   },
   {
     icon: GlobeIcon,
-    label: "Resume",
+    key: "resume",
     display: "mertincesu.dev/cv.pdf",
     href: "/cv.pdf",
     arrow: "↓",
   },
 ] as const;
 
-export default function Contact() {
+export default function Contact({ dict }: { dict: Dictionary["contact"] }) {
   return (
     <section id="contact" className="border-t border-line">
       <div className="max-w-[1120px] mx-auto px-6 py-24 md:py-32">
         <Reveal className="flex items-center gap-3 mb-12">
-          <span className="eyebrow">04 / Contact</span>
+          <span className="eyebrow">{dict.eyebrow}</span>
           <span className="h-px flex-1 bg-line" aria-hidden="true" />
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           <Reveal className="md:col-span-5">
             <h2 className="text-[32px] md:text-[48px] leading-[1.02] tracking-tighter2 font-medium">
-              Get in touch.
+              {dict.headingLine1}
               <br />
               <span className="text-muted">
-                I respond to every message.
+                {dict.headingLine2}
                 <span className="caret">&nbsp;</span>
               </span>
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-muted max-w-[42ch]">
-              Interested in backend and platform engineering roles across Munich, Berlin, or 
-              remote within Europe. Also open to open-source collaborations, personal projects,
-              and long-term client or project-based engineering work.
+              {dict.body}
             </p>
 
             <ul className="mt-10 space-y-px border border-line rounded-lg overflow-hidden">
-              {links.map(({ icon: Icon, label, display, href, arrow }) => (
-                <li key={label} className="first:border-0 border-t border-line">
+              {links.map(({ icon: Icon, key, display, href, arrow }) => (
+                <li key={key} className="first:border-0 border-t border-line">
                   <a
                     href={href}
                     className="group flex items-center justify-between px-5 py-4 hover-glass transition-colors"
@@ -93,7 +92,9 @@ export default function Contact() {
                         <Icon />
                       </span>
                       <span>
-                        <span className="block text-[14px]">{label}</span>
+                        <span className="block text-[14px]">
+                          {dict.linkLabels[key]}
+                        </span>
                         <span className="block font-mono text-[12.5px] text-muted">
                           {display}
                         </span>
@@ -109,7 +110,7 @@ export default function Contact() {
           </Reveal>
 
           <Reveal className="md:col-span-7">
-            <ContactForm />
+            <ContactForm dict={dict.form} />
           </Reveal>
         </div>
       </div>

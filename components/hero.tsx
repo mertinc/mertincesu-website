@@ -1,5 +1,6 @@
 import Reveal from "./reveal";
 import LocalTime from "./local-time";
+import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
 function ArrowRightIcon() {
   return (
@@ -40,14 +41,7 @@ function DownloadIcon() {
   );
 }
 
-const stats = [
-  { label: "Focus", value: "Distributed backends", mono: false },
-  { label: "Primary", value: "Kotlin · Spring Boot", mono: true },
-  { label: "Experience", value: "3+ years, production", mono: false },
-  { label: "Open to", value: "Backend · Full-Stack · Platform", mono: false },
-] as const;
-
-export default function Hero() {
+export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
   return (
     <section className="relative overflow-hidden">
       <div
@@ -58,9 +52,9 @@ export default function Hero() {
 
         <Reveal className="flex items-center gap-2 mb-8 text-[12px] font-mono text-muted">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
-          <span>Munich, Germany</span>
+          <span>{dict.location}</span>
           <span className="text-dim">·</span>
-          <LocalTime />
+          <LocalTime label={dict.tz} />
           <span className="text-dim">·</span>
           <span>v2026.06</span>
         </Reveal>
@@ -69,21 +63,22 @@ export default function Hero() {
           as="h1"
           className="text-[44px] sm:text-[64px] md:text-[80px] leading-[0.98] tracking-tighter2 font-medium"
         >
-          Software engineer
+          {dict.title.line1}
           <br />
-          building <span className="accent-underline">reliable</span> systems
+          {dict.title.line2Pre}
+          <span className="accent-underline">{dict.title.line2Accent}</span>
+          {dict.title.line2Post}
           <br className="hidden sm:block" />
-          <span className="text-muted">at the API layer.</span>
+          <span className="text-muted">{dict.title.line3}</span>
         </Reveal>
 
         <Reveal
           as="p"
           className="mt-8 max-w-2xl text-[17px] md:text-[18px] leading-relaxed text-muted"
         >
-          I&apos;m <span className="text-fg">Mert Incesu</span> — a software
-          engineer with 3+ years of experience designing and shipping production
-          microservices in Java, Kotlin and Spring Boot. I care about clear
-          contracts, observability, and code that ages well.
+          {dict.intro.pre}
+          <span className="text-fg">{dict.intro.name}</span>
+          {dict.intro.post}
         </Reveal>
 
         <Reveal className="mt-10 flex flex-wrap items-center gap-3">
@@ -98,19 +93,19 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors"
           >
-            Get in touch
+            {dict.ctaContact}
           </a>
           <a
             href="#"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-line2 text-[14px] hover:border-fg/40 hover-glass transition-colors"
           >
             <DownloadIcon />
-            Download CV
+            {dict.ctaCv}
           </a>
         </Reveal>
 
         <Reveal className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-line border border-line rounded-lg overflow-hidden">
-          {stats.map(({ label, value, mono }) => (
+          {dict.stats.map(({ label, value, mono }) => (
             <div key={label} className="bg-bg p-5">
               <div className="eyebrow">{label}</div>
               <div

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function LocalTime() {
+export default function LocalTime({ label = "CET" }: { label?: string }) {
   const [time, setTime] = useState<string>("");
 
   useEffect(() => {
@@ -19,5 +19,5 @@ export default function LocalTime() {
   }, []);
 
   if (!time) return null;
-  return <span>{time} CET</span>;
+  return <span>{time} {label}</span>;
 }
