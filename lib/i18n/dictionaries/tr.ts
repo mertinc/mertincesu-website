@@ -48,8 +48,8 @@ const tr: Dictionary = {
     eyebrow: "01 / Hakkımda",
     portraitAlt: "Mert Incesu",
     heading:
-      "Temel parçaları özenle inşa ederim ki karmaşık parçalar sorunsuz çalışsın.",
-    p1: "Son üç yılı ödeme, kimlik ve şirket içi platform ekiplerinde geçirdim; günde milyonlarca isteği işleyen servislerin sahipliğini üstlendim. İşimin büyük bölümü Kotlin ve Spring Boot üzerinde — altında PostgreSQL, önünde Kafka.",
+      "Karmaşık sistemlerin güvenilir çalışabilmesi için temel yapı taşlarını sağlam bir şekilde tasarlar ve geliştiririm.",
+    p1: "Son üç yıldır ödeme sistemleri, kimlik ve erişim yönetimi ile iç platform ekiplerinde çalışıyorum. Bu süreçte, günde milyonlarca isteği işleyen servislerin tasarımından geliştirilmesine ve operasyonuna kadar uçtan uca sorumluluk aldım. Ağırlıklı olarak Kotlin ve Spring Boot ile çalışıyor; veri katmanında PostgreSQL, olay odaklı mimarilerde ise Kafka kullanıyorum.",
     p2: {
       pre: "Sistemlerin güvenilir, sürdürülebilir ve operasyonel açıdan ",
       accent: "öngörülebilir",
