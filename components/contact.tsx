@@ -1,5 +1,6 @@
 import Reveal from "./reveal";
 import ContactForm from "./contact-form";
+import SectionHeader from "./section-header";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
 function Svg({ children }: { children: React.ReactNode }) {
@@ -61,10 +62,7 @@ export default function Contact({ dict }: { dict: Dictionary["contact"] }) {
   return (
     <section id="contact" className="border-t border-line">
       <div className="max-w-[1120px] mx-auto px-6 py-24 md:py-32">
-        <Reveal className="flex items-center gap-3 mb-12">
-          <span className="eyebrow">{dict.eyebrow}</span>
-          <span className="h-px flex-1 bg-line" aria-hidden="true" />
-        </Reveal>
+        <SectionHeader eyebrow={dict.eyebrow} />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           <Reveal className="md:col-span-5">

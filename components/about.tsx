@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Reveal from "./reveal";
+import SectionHeader from "./section-header";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
 export default function About({ dict }: { dict: Dictionary["about"] }) {
   return (
     <section id="about" className="border-t border-line">
       <div className="max-w-[1120px] mx-auto px-6 py-24 md:py-32">
-        <Reveal className="flex items-center gap-3 mb-12">
-          <span className="eyebrow">{dict.eyebrow}</span>
-          <span className="h-px flex-1 bg-line" aria-hidden="true" />
-        </Reveal>
+        <SectionHeader eyebrow={dict.eyebrow} />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           {/* Photo placeholder */}

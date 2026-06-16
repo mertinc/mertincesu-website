@@ -2,25 +2,6 @@ import Reveal from "./reveal";
 import LocalTime from "./local-time";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
-function ArrowRightIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
-    </svg>
-  );
-}
-
 function DownloadIcon() {
   return (
     <svg
@@ -82,13 +63,6 @@ export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
         </Reveal>
 
         <Reveal className="mt-10 flex flex-wrap items-center gap-3">
-          {/* <a
-            href="#projects"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors"
-          >
-            View projects
-            <ArrowRightIcon />
-          </a> */}
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors"

@@ -1,14 +1,12 @@
 import Reveal from "./reveal";
+import SectionHeader from "./section-header";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
 export default function Stack({ dict }: { dict: Dictionary["stack"] }) {
   return (
     <section id="stack" className="border-t border-line">
       <div className="max-w-[1120px] mx-auto px-6 py-24 md:py-32">
-        <Reveal className="flex items-center gap-3 mb-12">
-          <span className="eyebrow">{dict.eyebrow}</span>
-          <span className="h-px flex-1 bg-line" aria-hidden="true" />
-        </Reveal>
+        <SectionHeader eyebrow={dict.eyebrow} />
 
         <Reveal className="max-w-3xl mb-14">
           <h2 className="text-[32px] md:text-[44px] leading-[1.05] tracking-tighter2 font-medium">
