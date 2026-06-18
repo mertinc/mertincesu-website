@@ -2,7 +2,6 @@ import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Stack from "@/components/stack";
-// import Projects from "@/components/projects";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -24,7 +23,6 @@ export default async function Home({
         <Hero dict={dict.hero} />
         <About dict={dict.about} />
         <Stack dict={dict.stack} />
-        {/* <Projects /> */}
         <Experience dict={dict.experience} />
         <Contact dict={dict.contact} />
       </main>

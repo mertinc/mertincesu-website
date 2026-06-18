@@ -5,7 +5,6 @@ import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 const NAV_LINKS = [
   { href: "#about", key: "about" },
   { href: "#stack", key: "stack" },
-  // { href: "#projects", key: "projects" },
   { href: "#experience", key: "experience" },
   { href: "#contact", key: "contact" },
 ] as const;
