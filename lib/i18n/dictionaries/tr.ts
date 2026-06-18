@@ -51,9 +51,9 @@ const tr: Dictionary = {
       "Karmaşık sistemlerin güvenilir çalışabilmesi için temel yapı taşlarını sağlam bir şekilde tasarlar ve geliştiririm.",
     p1: "Son üç yıldır ödeme sistemleri, kimlik ve erişim yönetimi ile iç platform ekiplerinde çalışıyorum. Bu süreçte, günde milyonlarca isteği işleyen servislerin tasarımından geliştirilmesine ve operasyonuna kadar uçtan uca sorumluluk aldım. Ağırlıklı olarak Kotlin ve Spring Boot ile çalışıyor; veri katmanında PostgreSQL, olay odaklı mimarilerde ise Kafka kullanıyorum.",
     p2: {
-      pre: "Sistemlerin güvenilir, sürdürülebilir ve operasyonel açıdan ",
-      accent: "öngörülebilir",
-      post: " kalması gereken ortamlarda en iyi performansımı gösteririm. Odağım; net servis sınırları tanımlamak, istikrarlı sözleşmeler kurmak ve teknik borcu operasyonel bir riske dönüşmeden azaltmaktır. Düşünülmüş mimariye, açık dokümantasyona ve sistemin uzun vadeli istikrarını artıran pragmatik mühendislik kararlarına değer veririm.",
+      pre: "Güvenilirlik ve sürdürülebilirliğin ön planda olduğu sistemlerde çalışmayı seviyorum. Servisler arasındaki sınırların net tanımlanmasına, entegrasyonların sağlam temeller üzerine kurulmasına ve sistemlerin uzun vadede yönetilebilir kalmasına odaklanıyorum. Açık dokümantasyonu, ",
+      accent: "anlaşılır mimarileri",
+      post: " ve sistemlerin uzun vadede güvenilir ve yönetilebilir kalmasını sağlayan teknik tasarım kararlarını önemsiyorum.",
     },
     facts: [
       { label: "Konum", value: "Münih, DE" },
