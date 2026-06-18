@@ -131,7 +131,7 @@ const en = {
     heading: "Where I've worked.",
     items: {
       sfc: {
-        period: "Apr 2024 — Oct 2025",
+        period: "Mar 2024 — Oct 2025",
         location: "Munich",
         role: "Software Engineer",
         companyNote: "energy tech, IoT",
@@ -139,7 +139,7 @@ const en = {
           "Contributed to the EFOY Cloud platform as part of the data engineering team. Designed and implemented Kotlin microservices and RESTful services with Spring Boot; deployed containerized workloads on Azure via Docker.",
       },
       autodeals: {
-        period: "Aug 2023 — Apr 2024",
+        period: "Aug 2023 — Mar 2024",
         location: "Munich",
         role: "Software Engineer",
         companyNote: "automotive marketplace",
@@ -147,7 +147,7 @@ const en = {
           "Supported the platform from inception to production, managing software processes and contributing to continuous improvement across the full development lifecycle.",
       },
       viennalife: {
-        period: "Oct 2022 — Aug 2023",
+        period: "Sep 2022 — Aug 2023",
         location: "Istanbul",
         role: "Software Engineer",
         companyNote: "Vienna Insurance Group",
@@ -155,7 +155,7 @@ const en = {
           "Developed and maintained Java microservices for enterprise insurance platforms covering sales, policy management, and operational workflows. Improved deployment reliability via Jenkins CI/CD and Kubernetes; built back-office tooling with Spring Boot and React.",
       },
       pia: {
-        period: "Mar 2022 — Oct 2022",
+        period: "Jan 2022 — Sep 2022",
         location: "Istanbul",
         role: "Software Engineer",
         companyNote: "People in Action",
@@ -163,7 +163,7 @@ const en = {
           "Debugged Java/Spring backend services on the Vodafone Turkey defect resolution team. On the Vodafone Albania project, built SQL-based data migration rules and used AWS services to ensure accurate, consistent data transfers.",
       },
       pyz: {
-        period: "Oct 2021 — Feb 2022",
+        period: "Aug 2021 — Jan 2022",
         location: "Istanbul",
         role: "Software Developer",
         companyNote: "design studio",

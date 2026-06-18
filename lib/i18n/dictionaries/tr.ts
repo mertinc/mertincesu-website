@@ -133,7 +133,7 @@ const tr: Dictionary = {
     heading: "Nerelerde çalıştım.",
     items: {
       sfc: {
-        period: "Nis 2024 — Eki 2025",
+        period: "Mar 2024 — Eki 2025",
         location: "Münih",
         role: "Yazılım Mühendisi",
         companyNote: "enerji teknolojisi, IoT",
@@ -141,7 +141,7 @@ const tr: Dictionary = {
           "Veri mühendisliği ekibinin bir parçası olarak EFOY Cloud platformuna katkıda bulundum. Spring Boot ile Kotlin mikroservisleri ve RESTful servisler tasarlayıp geliştirdim; konteynerleştirilmiş iş yüklerini Docker ile Azure üzerinde devreye aldım.",
       },
       autodeals: {
-        period: "Ağu 2023 — Nis 2024",
+        period: "Ağu 2023 — Mar 2024",
         location: "Münih",
         role: "Yazılım Mühendisi",
         companyNote: "otomotiv pazaryeri",
@@ -149,7 +149,7 @@ const tr: Dictionary = {
           "Platformu kuruluş aşamasından canlıya geçişine kadar destekledim; yazılım süreçlerini yönettim ve geliştirme yaşam döngüsünün tamamında sürekli iyileştirmeye katkı sağladım.",
       },
       viennalife: {
-        period: "Eki 2022 — Ağu 2023",
+        period: "Eyl 2022 — Ağu 2023",
         location: "İstanbul",
         role: "Yazılım Mühendisi",
         companyNote: "Vienna Insurance Group",
@@ -157,7 +157,7 @@ const tr: Dictionary = {
           "Satış, poliçe yönetimi ve operasyonel iş akışlarını kapsayan kurumsal sigorta platformları için Java mikroservisleri geliştirdim ve bakımını üstlendim. Jenkins CI/CD ve Kubernetes ile dağıtım güvenilirliğini artırdım; Spring Boot ve React ile arka ofis araçları geliştirdim.",
       },
       pia: {
-        period: "Mar 2022 — Eki 2022",
+        period: "Oca 2022 — Eyl 2022",
         location: "İstanbul",
         role: "Yazılım Mühendisi",
         companyNote: "People in Action",
@@ -165,7 +165,7 @@ const tr: Dictionary = {
           "Vodafone Türkiye hata çözümleme ekibinde Java/Spring backend servislerinde hata ayıklama yaptım. Vodafone Arnavutluk projesinde SQL tabanlı veri taşıma kuralları oluşturdum ve verilerin doğru, tutarlı aktarımını sağlamak için AWS servislerini kullandım.",
       },
       pyz: {
-        period: "Eki 2021 — Şub 2022",
+        period: "Ağu 2021 — Oca 2022",
         location: "İstanbul",
         role: "Yazılım Geliştirici",
         companyNote: "tasarım stüdyosu",

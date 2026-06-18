@@ -133,7 +133,7 @@ const de: Dictionary = {
     heading: "Wo ich gearbeitet habe.",
     items: {
       sfc: {
-        period: "Apr. 2024 — Okt. 2025",
+        period: "März 2024 — Okt. 2025",
         location: "München",
         role: "Software Engineer",
         companyNote: "Energietechnik, IoT",
@@ -141,7 +141,7 @@ const de: Dictionary = {
           "Mitarbeit an der EFOY-Cloud-Plattform als Teil des Data-Engineering-Teams. Entwurf und Implementierung von Kotlin-Microservices und RESTful Services mit Spring Boot; Deployment containerisierter Workloads auf Azure mit Docker.",
       },
       autodeals: {
-        period: "Aug. 2023 — Apr. 2024",
+        period: "Aug. 2023 — März 2024",
         location: "München",
         role: "Software Engineer",
         companyNote: "Automobil-Marktplatz",
@@ -149,7 +149,7 @@ const de: Dictionary = {
           "Begleitung der Plattform von der Konzeption bis in die Produktion, Steuerung der Software-Prozesse und Mitwirkung an der kontinuierlichen Verbesserung über den gesamten Entwicklungszyklus hinweg.",
       },
       viennalife: {
-        period: "Okt. 2022 — Aug. 2023",
+        period: "Sep. 2022 — Aug. 2023",
         location: "Istanbul",
         role: "Software Engineer",
         companyNote: "Vienna Insurance Group",
@@ -157,7 +157,7 @@ const de: Dictionary = {
           "Entwicklung und Wartung von Java-Microservices für Enterprise-Versicherungsplattformen in den Bereichen Vertrieb, Policenverwaltung und operative Workflows. Verbesserung der Deployment-Zuverlässigkeit mit Jenkins CI/CD und Kubernetes; Entwicklung von Backoffice-Tools mit Spring Boot und React.",
       },
       pia: {
-        period: "März 2022 — Okt. 2022",
+        period: "Jan. 2022 — Sep. 2022",
         location: "Istanbul",
         role: "Software Engineer",
         companyNote: "People in Action",
@@ -165,7 +165,7 @@ const de: Dictionary = {
           "Debugging von Java-/Spring-Backend-Services im Defect-Resolution-Team für Vodafone Türkei. Im Vodafone-Albanien-Projekt SQL-basierte Datenmigrationsregeln entwickelt und AWS-Services eingesetzt, um korrekte und konsistente Datenübertragungen sicherzustellen.",
       },
       pyz: {
-        period: "Okt. 2021 — Feb. 2022",
+        period: "Aug. 2021 — Jan. 2022",
         location: "Istanbul",
         role: "Software Developer",
         companyNote: "Designstudio",
