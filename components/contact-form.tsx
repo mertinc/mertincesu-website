@@ -30,6 +30,8 @@ export default function ContactForm({
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [messageLen, setMessageLen] = useState(0);
+  const MAX_MESSAGE = 5000;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -103,11 +105,16 @@ export default function ContactForm({
       </label>
 
       <label className="block mt-4">
-        <span className="eyebrow">{dict.messageLabel}</span>
+        <span className="flex items-center justify-between">
+          <span className="eyebrow">{dict.messageLabel}</span>
+          <span className="font-mono text-[11px] text-dim">{messageLen}/{MAX_MESSAGE}</span>
+        </span>
         <textarea
           name="message"
           rows={6}
           required
+          maxLength={MAX_MESSAGE}
+          onChange={(e) => setMessageLen(e.target.value.length)}
           className="mt-2 w-full bg-transparent border border-line rounded-md px-3 py-2.5 text-[14px] focus:border-line2 focus-glass outline-none resize-none"
           placeholder={dict.messagePlaceholder}
         />
