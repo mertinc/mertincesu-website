@@ -127,7 +127,7 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={sent || loading}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors disabled:opacity-70"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors disabled:opacity-70 cursor-pointer disabled:cursor-not-allowed"
         >
           {sent ? dict.sent : loading ? dict.sending : dict.submit}
           {!sent && !loading && <ArrowRightIcon />}
