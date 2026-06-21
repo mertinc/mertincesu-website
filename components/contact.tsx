@@ -52,8 +52,8 @@ const links = [
   {
     icon: GlobeIcon,
     key: "resume",
-    display: "mertincesu.dev/cv.pdf",
-    href: "/cv.pdf",
+    display: "Mert_Incesu_Resume.pdf",
+    href: "/Mert_Incesu_Resume.pdf",
     arrow: "↓",
   },
 ] as const;
@@ -83,6 +83,8 @@ export default function Contact({ dict }: { dict: Dictionary["contact"] }) {
                 <li key={key} className="first:border-0 border-t border-line">
                   <a
                     href={href}
+                    target={href.startsWith("mailto:") ? undefined : "_blank"}
+                    rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                     className="group flex items-center justify-between px-5 py-4 hover-glass transition-colors"
                   >
                     <span className="flex items-center gap-3">
