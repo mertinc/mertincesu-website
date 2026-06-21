@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    volumes:
+      - ./Mert_Incesu_Resume.pdf:/app/public/Mert_Incesu_Resume.pdf:ro
+    restart: unless-stopped
