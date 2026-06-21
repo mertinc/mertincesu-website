@@ -27,7 +27,7 @@
   --c-stripe-line: oklch(1 0 0 / 0.025);
   --c-glass-1: oklch(1 0 0 / 0.025);
   --c-glass-2: oklch(1 0 0 / 0.03);
-  --c-nav-bg: oklch(0.145 0.005 240 / 0.72);
+  --c-nav-bg: oklch(0.145 0.005 240);
 }
 
 html,
@@ -128,8 +128,6 @@ section[id] {
 
 /* Frosted-glass nav background */
 .nav-blur {
-  backdrop-filter: saturate(140%) blur(10px);
-  -webkit-backdrop-filter: saturate(140%) blur(10px);
   background-color: var(--c-nav-bg);
 }
 
