@@ -31,8 +31,8 @@ const links = [
   {
     icon: EmailIcon,
     key: "email",
-    display: "mert@mertincesu.dev",
-    href: "mailto:mert@mertincesu.dev",
+    display: "contact@mertincesu.com",
+    href: "mailto:contact@mertincesu.com",
     arrow: "→",
   },
   {
