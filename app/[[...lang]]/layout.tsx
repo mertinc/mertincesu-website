@@ -34,7 +34,7 @@ export async function generateMetadata({
   const { meta } = await getDictionary(locale);
 
   return {
-    metadataBase: new URL("https://mertincesu.dev"),
+    metadataBase: new URL("https://mertincesu.com"),
     title: meta.title,
     description: meta.description,
     authors: [{ name: "Mert Incesu" }],

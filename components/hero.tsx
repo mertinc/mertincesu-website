@@ -70,7 +70,9 @@ export default function Hero({ dict }: { dict: Dictionary["hero"] }) {
             {dict.ctaContact}
           </a>
           <a
-            href="#"
+            href="/Mert_Incesu_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-line2 text-[14px] hover:border-fg/40 hover-glass transition-colors"
           >
             <DownloadIcon />
