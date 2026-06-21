@@ -205,8 +205,10 @@ const de: Dictionary = {
         "Beschreiben Sie das Projekt, die Rolle oder die Idee, über die Sie sprechen möchten.",
       privacyNote: "Verschlüsselt übertragen · Kein Tracking",
       submit: "Nachricht senden",
+      sending: "Wird gesendet…",
       sent: "Gesendet ✓",
       success: "// Nachricht eingegangen — ich antworte innerhalb von 48 h.",
+      error: "// Etwas ist schiefgelaufen — bitte erneut versuchen.",
     },
   },
   footer: {

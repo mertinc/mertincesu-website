@@ -28,10 +28,35 @@ export default function ContactForm({
   dict: Dictionary["contact"]["form"];
 }) {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setError(false);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      subject: (form.elements.namedItem("subject") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error();
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -50,6 +75,7 @@ export default function ContactForm({
           <span className="eyebrow">{dict.nameLabel}</span>
           <input
             type="text"
+            name="name"
             required
             className="mt-2 w-full bg-transparent border border-line rounded-md px-3 py-2.5 text-[14px] focus:border-line2 focus-glass outline-none"
             placeholder={dict.namePlaceholder}
@@ -59,6 +85,7 @@ export default function ContactForm({
           <span className="eyebrow">{dict.emailLabel}</span>
           <input
             type="email"
+            name="email"
             required
             className="mt-2 w-full bg-transparent border border-line rounded-md px-3 py-2.5 text-[14px] font-mono focus:border-line2 focus-glass outline-none"
             placeholder={dict.emailPlaceholder}
@@ -68,7 +95,7 @@ export default function ContactForm({
 
       <label className="block mt-4">
         <span className="eyebrow">{dict.subjectLabel}</span>
-        <select className="mt-2 w-full bg-bg border border-line rounded-md px-3 py-2.5 text-[14px] focus:border-line2 outline-none">
+        <select name="subject" className="mt-2 w-full bg-bg border border-line rounded-md px-3 py-2.5 text-[14px] focus:border-line2 outline-none">
           {dict.subjects.map((s) => (
             <option key={s}>{s}</option>
           ))}
@@ -78,6 +105,7 @@ export default function ContactForm({
       <label className="block mt-4">
         <span className="eyebrow">{dict.messageLabel}</span>
         <textarea
+          name="message"
           rows={6}
           required
           className="mt-2 w-full bg-transparent border border-line rounded-md px-3 py-2.5 text-[14px] focus:border-line2 focus-glass outline-none resize-none"
@@ -91,18 +119,19 @@ export default function ContactForm({
         </div>
         <button
           type="submit"
-          disabled={sent}
+          disabled={sent || loading}
           className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-fg text-bg text-[14px] font-medium hover:bg-fg/90 transition-colors disabled:opacity-70"
         >
-          {sent ? dict.sent : dict.submit}
-          {!sent && <ArrowRightIcon />}
+          {sent ? dict.sent : loading ? dict.sending : dict.submit}
+          {!sent && !loading && <ArrowRightIcon />}
         </button>
       </div>
 
       {sent && (
-        <p className="mt-4 text-[13px] text-accent font-mono">
-          {dict.success}
-        </p>
+        <p className="mt-4 text-[13px] text-accent font-mono">{dict.success}</p>
+      )}
+      {error && (
+        <p className="mt-4 text-[13px] text-red-500 font-mono">{dict.error}</p>
       )}
     </form>
   );

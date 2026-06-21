@@ -205,8 +205,10 @@ const tr: Dictionary = {
         "Görüşmek istediğiniz projeyi, rolü veya fikri kısaca anlatın.",
       privacyNote: "Aktarımda şifreli · Takip yok",
       submit: "Mesajı gönder",
+      sending: "Gönderiliyor…",
       sent: "Gönderildi ✓",
       success: "// mesaj sıraya alındı — 48 saat içinde yanıtlarım.",
+      error: "// bir sorun oluştu — lütfen tekrar deneyin.",
     },
   },
   footer: {

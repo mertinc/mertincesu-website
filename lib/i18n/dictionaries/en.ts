@@ -203,8 +203,10 @@ const en = {
         "Describe the project, role, or idea you'd like to discuss.",
       privacyNote: "Encrypted in transit · No tracking",
       submit: "Send message",
+      sending: "Sending…",
       sent: "Sent ✓",
       success: "// message queued — I'll reply within 48h.",
+      error: "// something went wrong — please try again.",
     },
   },
   footer: {
