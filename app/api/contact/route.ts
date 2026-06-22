@@ -3,16 +3,36 @@ import { NextRequest } from "next/server";
 
 const MAX_NAME_LEN = 100;
 const MAX_EMAIL_LEN = 254;
-const MAX_SUBJECT_LEN = 200;
 const MAX_MESSAGE_LEN = 5000;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// All valid subject values across all supported locales (en / de / tr)
+const VALID_SUBJECTS = new Set([
+  "Hiring / role opportunity",
+  "Contract or project-based engagement",
+  "Long-term client or consultancy",
+  "Open-source collaboration",
+  "Personal project",
+  "Other",
+  "Recruiting / Stellenangebot",
+  "Vertrags- oder projektbasierte Zusammenarbeit",
+  "Langfristige Zusammenarbeit oder Beratung",
+  "Open-Source-Zusammenarbeit",
+  "Persönliches Projekt",
+  "Sonstiges",
+  "İşe alım / rol fırsatı",
+  "Sözleşmeli veya proje bazlı çalışma",
+  "Uzun vadeli müşteri veya danışmanlık",
+  "Açık kaynak iş birliği",
+  "Kişisel proje",
+  "Diğer",
+]);
 
 // IP → [count, window_start_ms]
 const rateMap = new Map<string, [number, number]>();
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 3;
 
-// Periodically evict expired entries to prevent unbounded memory growth
 setInterval(() => {
   const now = Date.now();
   for (const [ip, [, start]] of rateMap) {
@@ -40,6 +60,11 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
+// Strips CR/LF to prevent email header injection
+function stripControl(s: string): string {
+  return s.replace(/[\r\n]+/g, " ").trim();
+}
+
 export async function POST(req: NextRequest) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -52,7 +77,10 @@ export async function POST(req: NextRequest) {
   }
 
   if (isRateLimited(getIP(req))) {
-    return Response.json({ error: "Too many requests" }, { status: 429 });
+    return Response.json(
+      { error: "Too many requests" },
+      { status: 429, headers: { "Retry-After": String(Math.ceil(WINDOW_MS / 1000)) } },
+    );
   }
 
   let body: unknown;
@@ -62,7 +90,10 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { name, email, subject, message } = body as Record<string, unknown>;
+  const { name, email, subject, message, website } = body as Record<string, unknown>;
+
+  // Honeypot: real users leave this empty; bots fill it
+  if (website) return Response.json({ ok: true });
 
   if (
     typeof name !== "string" ||
@@ -73,20 +104,25 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: "Invalid fields" }, { status: 400 });
   }
 
-  if (!name.trim() || !email.trim() || !message.trim()) {
+  const safeName = stripControl(name);
+  const safeEmail = stripControl(email);
+  const safeSubject = stripControl(subject);
+  const safeMessage = message.replace(/\r\n/g, "\n").replace(/\r/g, "\n").trim();
+
+  if (!safeName || !safeEmail || !safeMessage) {
     return Response.json({ error: "Missing fields" }, { status: 400 });
   }
 
-  if (name.length > MAX_NAME_LEN) {
+  if (safeName.length > MAX_NAME_LEN) {
     return Response.json({ error: "Name too long" }, { status: 400 });
   }
-  if (email.length > MAX_EMAIL_LEN || !EMAIL_RE.test(email)) {
+  if (safeEmail.length > MAX_EMAIL_LEN || !EMAIL_RE.test(safeEmail)) {
     return Response.json({ error: "Invalid email" }, { status: 400 });
   }
-  if (subject.length > MAX_SUBJECT_LEN) {
-    return Response.json({ error: "Subject too long" }, { status: 400 });
+  if (safeSubject && !VALID_SUBJECTS.has(safeSubject)) {
+    return Response.json({ error: "Invalid subject" }, { status: 400 });
   }
-  if (message.length > MAX_MESSAGE_LEN) {
+  if (safeMessage.length > MAX_MESSAGE_LEN) {
     return Response.json({ error: "Message too long" }, { status: 400 });
   }
 
@@ -94,9 +130,9 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: "contact@mertincesu.com",
       to: "contact@mertincesu.com",
-      replyTo: email,
-      subject: `[mertincesu.com] ${subject || "New message"}`,
-      text: `From: ${name} <${email}>\n\n${message}`,
+      replyTo: safeEmail,
+      subject: `[mertincesu.com] ${safeSubject || "New message"}`,
+      text: `From: ${safeName} <${safeEmail}>\n\n${safeMessage}`,
     });
   } catch {
     return Response.json({ error: "Failed to send" }, { status: 500 });

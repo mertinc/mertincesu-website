@@ -44,6 +44,7 @@ export default function ContactForm({
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       subject: (form.elements.namedItem("subject") as HTMLSelectElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      website: (form.elements.namedItem("website") as HTMLInputElement).value,
     };
 
     try {
@@ -119,6 +120,9 @@ export default function ContactForm({
           placeholder={dict.messagePlaceholder}
         />
       </label>
+      <div aria-hidden="true" style={{ display: "none" }}>
+        <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
 
       <div className="mt-6 flex items-center justify-between flex-wrap gap-3">
         <div className="font-mono text-[11px] text-dim">
