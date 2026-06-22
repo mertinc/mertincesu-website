@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
-
 const MAX_NAME_LEN = 100;
 const MAX_EMAIL_LEN = 254;
 const MAX_SUBJECT_LEN = 200;
@@ -43,6 +41,12 @@ function isRateLimited(ip: string): boolean {
 }
 
 export async function POST(req: NextRequest) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return Response.json({ error: "Email service not configured" }, { status: 500 });
+  }
+  const resend = new Resend(apiKey);
+
   if (req.headers.get("content-type") !== "application/json") {
     return Response.json({ error: "Invalid content type" }, { status: 415 });
   }
