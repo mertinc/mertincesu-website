@@ -41,8 +41,6 @@ export default function Nav({
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <ThemeToggle />
-
           <nav
             aria-label={dict.languageLabel}
             className="flex items-center rounded-md border border-line2 overflow-hidden font-mono text-[11px]"
@@ -62,6 +60,8 @@ export default function Nav({
               </Link>
             ))}
           </nav>
+
+          <ThemeToggle />
 
           <a
             href="#contact"
