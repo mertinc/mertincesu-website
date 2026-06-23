@@ -3,23 +3,53 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@theme {
-  --color-bg: oklch(0.145 0.005 240);
-  --color-panel: oklch(0.175 0.006 240);
-  --color-fg: oklch(0.97 0.002 240);
-  --color-muted: oklch(0.68 0.008 240);
-  --color-dim: oklch(0.52 0.008 240);
-  --color-line: oklch(1 0 0 / 0.08);
-  --color-line2: oklch(1 0 0 / 0.14);
-  --color-accent: oklch(0.80 0.13 195);
-  --color-hover: oklch(0.185 0.006 240);
+  --color-bg: var(--t-bg);
+  --color-panel: var(--t-panel);
+  --color-fg: var(--t-fg);
+  --color-muted: var(--t-muted);
+  --color-dim: var(--t-dim);
+  --color-line: var(--t-line);
+  --color-line2: var(--t-line2);
+  --color-accent: var(--t-accent);
+  --color-hover: var(--t-hover);
   --tracking-tightish: -0.015em;
   --tracking-tighter2: -0.03em;
 }
 
+/* Light theme (default) */
 :root {
+  --t-bg: oklch(0.99 0.001 240);
+  --t-panel: oklch(0.96 0.002 240);
+  --t-fg: oklch(0.13 0.005 240);
+  --t-muted: oklch(0.45 0.008 240);
+  --t-dim: oklch(0.60 0.008 240);
+  --t-line: oklch(0 0 0 / 0.09);
+  --t-line2: oklch(0 0 0 / 0.15);
+  --t-accent: oklch(0.52 0.13 195);
+  --t-hover: oklch(0.93 0.003 240);
+
+  --c-selection: oklch(0.52 0.13 195 / 0.18);
+  --c-underline: oklch(0.52 0.13 195 / 0.28);
+  --c-grid: oklch(0 0 0 / 0.06);
+  --c-stripe-bg: oklch(0.92 0.002 240);
+  --c-stripe-line: oklch(0 0 0 / 0.04);
+  --c-glass-1: oklch(0 0 0 / 0.02);
+  --c-glass-2: oklch(0 0 0 / 0.03);
+  --c-nav-bg: oklch(0.99 0.001 240);
+}
+
+/* Dark theme */
+.dark {
+  --t-bg: oklch(0.145 0.005 240);
+  --t-panel: oklch(0.175 0.006 240);
+  --t-fg: oklch(0.97 0.002 240);
+  --t-muted: oklch(0.68 0.008 240);
+  --t-dim: oklch(0.52 0.008 240);
+  --t-line: oklch(1 0 0 / 0.08);
+  --t-line2: oklch(1 0 0 / 0.14);
+  --t-accent: oklch(0.80 0.13 195);
+  --t-hover: oklch(0.185 0.006 240);
+
   --c-selection: oklch(0.80 0.13 195 / 0.30);
   --c-underline: oklch(0.80 0.13 195 / 0.35);
   --c-grid: oklch(1 0 0 / 0.035);
@@ -32,7 +62,7 @@
 
 html,
 body {
-  background-color: oklch(0.145 0.005 240);
+  background-color: var(--t-bg);
 }
 
 html {
@@ -40,7 +70,7 @@ html {
 }
 
 body {
-  color: oklch(0.97 0.002 240);
+  color: var(--t-fg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01", "cv11";
@@ -48,11 +78,11 @@ body {
 
 ::selection {
   background: var(--c-selection);
-  color: oklch(0.97 0.002 240);
+  color: var(--t-fg);
 }
 
 :focus-visible {
-  outline: 2px solid oklch(0.80 0.13 195);
+  outline: 2px solid var(--t-accent);
   outline-offset: 2px;
   border-radius: 6px;
 }
@@ -108,7 +138,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: oklch(0.68 0.008 240);
+  color: var(--t-muted);
 }
 
 /* Striped placeholder for images / diagrams */
@@ -135,7 +165,7 @@ section[id] {
 .caret {
   display: inline-block;
   width: 0.55ch;
-  background: oklch(0.97 0.002 240);
+  background: var(--t-fg);
   animation: blink 1.1s steps(1) infinite;
   transform: translateY(2px);
 }
@@ -150,7 +180,7 @@ section[id] {
   width: 4px;
   height: 4px;
   border-radius: 9999px;
-  background: oklch(0.52 0.008 240);
+  background: var(--t-dim);
   margin: 0 10px 2px;
 }
 
@@ -159,8 +189,8 @@ section[id] {
   transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 .card:hover {
-  border-color: oklch(1 0 0 / 0.14);
-  background-color: oklch(0.185 0.006 240);
+  border-color: var(--t-line2);
+  background-color: var(--t-hover);
 }
 
 /* Subtle glass hover/focus backgrounds */

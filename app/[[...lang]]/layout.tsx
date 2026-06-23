@@ -63,7 +63,12 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
-        <meta name="theme-color" content="#0b0c0e" />
+        <meta name="theme-color" content="#fcfcfd" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');document.querySelector('meta[name="theme-color"]')?.setAttribute('content','#0b0c0e');}}catch{}`,
+          }}
+        />
       </head>
       <body className="font-sans antialiased">{children}</body>
     </html>

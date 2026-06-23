@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { localePath, locales, type Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
+import { ThemeToggle } from "./theme-toggle";
 
 const NAV_LINKS = [
   { href: "#about", key: "about" },
@@ -40,6 +41,8 @@ export default function Nav({
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
+
           <nav
             aria-label={dict.languageLabel}
             className="flex items-center rounded-md border border-line2 overflow-hidden font-mono text-[11px]"
