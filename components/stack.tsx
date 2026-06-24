@@ -2,6 +2,27 @@ import Reveal from "./reveal";
 import SectionHeader from "./section-header";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
+type Category = Dictionary["stack"]["categories"][number];
+
+function CategoryCard({ title, badge, items }: Category) {
+  return (
+    <Reveal className="bg-bg p-7">
+      <div className="flex items-baseline justify-between mb-5">
+        <h3 className="text-[15px] font-medium tracking-tightish">{title}</h3>
+        <span className="eyebrow">{badge}</span>
+      </div>
+      <ul className="space-y-3 font-mono text-[13.5px]">
+        {items.map(({ name, note }) => (
+          <li key={name} className="flex items-center justify-between">
+            <span>{name}</span>
+            <span className="text-dim">{note}</span>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
+  );
+}
+
 export default function Stack({ dict }: { dict: Dictionary["stack"] }) {
   return (
     <section id="stack" className="border-t border-line">
@@ -19,32 +40,14 @@ export default function Stack({ dict }: { dict: Dictionary["stack"] }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-line border border-line rounded-lg overflow-hidden">
           {dict.categories.map((cat) => (
-            <Reveal key={cat.title} className="bg-bg p-7">
-              <div className="flex items-baseline justify-between mb-5">
-                <h3 className="text-[15px] font-medium tracking-tightish">
-                  {cat.title}
-                </h3>
-                <span className="eyebrow">{cat.badge}</span>
-              </div>
-              <ul className="space-y-3 font-mono text-[13.5px]">
-                {cat.items.map(({ name, note }) => (
-                  <li key={name} className="flex items-center justify-between">
-                    <span>{name}</span>
-                    <span className="text-dim">{note}</span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
+            <CategoryCard key={cat.title} {...cat} />
           ))}
         </div>
 
         <Reveal className="mt-10 flex flex-wrap items-center gap-x-2 gap-y-3 text-[13px] text-muted">
           <span className="eyebrow mr-2">{dict.alsoLabel}</span>
           {dict.methods.map((m) => (
-            <span
-              key={m}
-              className="px-2.5 py-1 rounded-md border border-line font-mono"
-            >
+            <span key={m} className="px-2.5 py-1 rounded-md border border-line font-mono">
               {m}
             </span>
           ))}
