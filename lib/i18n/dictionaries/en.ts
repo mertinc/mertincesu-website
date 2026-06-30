@@ -210,9 +210,8 @@ const en = {
     },
   },
   footer: {
-    copyright: "© 2026 Mert Incesu",
+    copyright: "© 2026 Mert Incesu — All rights reserved.",
     backToTop: "Back to top ↑",
-    rights: "All rights reserved. Unauthorised reproduction or use of any content, including photographs, is strictly prohibited.",
   },
 };
 

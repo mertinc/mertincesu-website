@@ -212,9 +212,8 @@ const tr: Dictionary = {
     },
   },
   footer: {
-    copyright: "© 2026 Mert Incesu",
+    copyright: "© 2026 Mert Incesu — Tüm hakları saklıdır.",
     backToTop: "Başa dön ↑",
-    rights: "Tüm hakları saklıdır. Fotoğraflar dahil tüm içeriklerin izinsiz çoğaltılması veya kullanılması kesinlikle yasaktır.",
   },
 };
 
