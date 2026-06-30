@@ -10,6 +10,12 @@ const NAV_LINKS = [
   { href: "#contact", key: "contact" },
 ] as const;
 
+const LOCALE_LABELS: Record<string, string> = {
+  en: "English",
+  de: "Deutsch",
+  tr: "Türkçe",
+};
+
 export default function Nav({
   dict,
   locale,
@@ -41,25 +47,39 @@ export default function Nav({
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <nav
+          <details
+            className="group relative"
             aria-label={dict.languageLabel}
-            className="flex items-center rounded-md border border-line2 overflow-hidden font-mono text-[11px]"
           >
-            {locales.map((l) => (
-              <Link
-                key={l}
-                href={localePath(l)}
-                aria-current={l === locale ? "true" : undefined}
-                className={`px-2 py-1.5 transition-colors ${
-                  l === locale
-                    ? "text-fg bg-fg/10"
-                    : "text-dim hover:text-fg"
-                }`}
+            <summary className="flex items-center gap-1 px-2.5 py-1.5 rounded-md border border-line2 font-mono text-[11px] text-dim hover:text-fg cursor-pointer transition-colors select-none list-none [&::-webkit-details-marker]:hidden">
+              {locale.toUpperCase()}
+              <svg
+                width="9" height="9" viewBox="0 0 9 9"
+                fill="none" stroke="currentColor" strokeWidth="1.5"
+                strokeLinecap="round" strokeLinejoin="round"
+                className="transition-transform duration-150 group-open:rotate-180"
+                aria-hidden="true"
               >
-                {l.toUpperCase()}
-              </Link>
-            ))}
-          </nav>
+                <path d="M1.5 3L4.5 6L7.5 3"/>
+              </svg>
+            </summary>
+            <div className="absolute right-0 top-full mt-1 min-w-[88px] rounded-md border border-line2 bg-bg overflow-hidden z-50">
+              {locales.map((l) => (
+                <Link
+                  key={l}
+                  href={localePath(l)}
+                  aria-current={l === locale ? "true" : undefined}
+                  className={`flex items-center px-3 py-1.5 font-mono text-[11px] transition-colors ${
+                    l === locale
+                      ? "text-fg bg-fg/10"
+                      : "text-dim hover:text-fg hover:bg-fg/5"
+                  }`}
+                >
+                  {LOCALE_LABELS[l]}
+                </Link>
+              ))}
+            </div>
+          </details>
 
           <ThemeToggle />
 
