@@ -214,6 +214,7 @@ const de: Dictionary = {
   footer: {
     copyright: "© 2026 Mert Incesu",
     backToTop: "Nach oben ↑",
+    rights: "Alle Rechte vorbehalten. Unerlaubte Vervielfältigung oder Verwendung von Inhalten, einschließlich Fotografien, ist strengstens untersagt.",
   },
 };
 

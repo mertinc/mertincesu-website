@@ -214,6 +214,7 @@ const tr: Dictionary = {
   footer: {
     copyright: "© 2026 Mert Incesu",
     backToTop: "Başa dön ↑",
+    rights: "Tüm hakları saklıdır. Fotoğraflar dahil tüm içeriklerin izinsiz çoğaltılması veya kullanılması kesinlikle yasaktır.",
   },
 };
 
