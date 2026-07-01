@@ -3,6 +3,8 @@ services:
     build: .
     env_file:
       - .env.local
+    ports:
+      - "127.0.0.1:3000:3000"
     volumes:
       - ./Mert_Incesu_Resume.pdf:/app/public/Mert_Incesu_Resume.pdf:ro
       - ./portrait.jpg:/app/public/portrait.jpg:ro
